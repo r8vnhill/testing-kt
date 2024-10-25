@@ -1,11 +1,16 @@
 [versions]
-kotlin = "2.0.20"
+kotlin = "2.0.21"
 testing = "1.0.0"
-detekt = "1.23.6"
+detekt = "1.23.7"
+kotest-framework = "5.9.1"
 
 [libraries]
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest-framework" }
 
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+
+[bundles]
+kotest = ["kotest-runner-junit5"]

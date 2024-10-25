@@ -4,7 +4,6 @@
 # Ignore Gradle build output directory
 build
 ### Gradle template
-.gradle
 **/build/
 !src/**/build/
 

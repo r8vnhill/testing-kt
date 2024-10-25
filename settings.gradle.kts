@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 }
 
 include("intro")
+include("pbt:biggest")

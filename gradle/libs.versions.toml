@@ -8,9 +8,11 @@ kotest-framework = "5.9.1"
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest-framework" }
+kotest-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest-framework" }
+kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest-framework" }
 
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 
 [bundles]
-kotest = ["kotest-runner-junit5"]
+kotest = ["kotest-runner-junit5", "kotest-datatest", "kotest-property"]

@@ -1,4 +1,5 @@
 plugins {
+    id("biggest")
     id("jvm.conventions")
     alias(libs.plugins.detekt)
 }

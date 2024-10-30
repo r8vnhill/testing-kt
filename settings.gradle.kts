@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 
 include("intro")
 include("pbt:biggest")
+include("bdd")

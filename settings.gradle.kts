@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 include("intro")
 include("pbt:biggest")
 include("bdd")
+include("pbt:arbitrary:prng")

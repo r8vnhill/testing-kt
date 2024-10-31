@@ -1,9 +1,10 @@
 plugins {
-    id("intro")
+    alias(libs.plugins.detekt)
     id("bdd")
     id("biggest")
+    id("intro")
     id("jvm.conventions")
-    alias(libs.plugins.detekt)
+    id("prng")
 }
 
 val projectGroup = extra["testing.group"]!! // Throws an exception if the property is not found

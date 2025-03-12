@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.detekt)
+    id("assertions")
     id("bdd")
     id("biggest")
     id("intro")

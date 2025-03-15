@@ -9,5 +9,10 @@ tasks.register<ModuleSetupTask>("setupStatsModule") {
             main to "Animal.kt",
             test to "AnimalTest.kt",
         )
+        createFiles(
+            "geometry",
+            main to "Triangle.kt",
+            test to "TriangleTest.kt",
+        )
     }
 }

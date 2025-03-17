@@ -3,6 +3,7 @@ plugins {
     id("assertions")
     id("bdd")
     id("biggest")
+    id("ddt")
     id("intro")
     id("jvm.conventions")
     id("prng")

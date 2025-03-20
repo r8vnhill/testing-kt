@@ -8,6 +8,7 @@ plugins {
     id("prng")
     id("stats")
     id("str-cat")
+    id("arb-composition")
 }
 
 val projectGroup = extra["testing.group"]!! // Throws an exception if the property is not found

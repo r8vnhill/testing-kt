@@ -9,5 +9,9 @@ tasks.register<ModuleSetupTask>("setupPrngModule") {
             main to "average.kt",
             test to "AverageTest.kt",
         )
+        createFiles(
+            "maps",
+            test to "IntStringMapTest.kt",
+        )
     }
 }

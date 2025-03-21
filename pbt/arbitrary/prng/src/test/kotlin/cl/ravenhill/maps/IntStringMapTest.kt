@@ -52,6 +52,25 @@ class IntStringMapTest : FreeSpec({
 
 private typealias IntStringMap = Map<Int, String>
 
+/**
+ * Generates an arbitrary map of integers to strings.
+ *
+ * This generator creates random maps where:
+ * - Each key is a randomly generated [Int].
+ * - Each value is a randomly generated [String] composed of Unicode characters (from code points 0x0000 to 0xFFFF),
+ *   with a length between 1 and 99 characters.
+ * - The total number of key-value pairs ranges from 1 to 99.
+ *
+ * ## Usage:
+ * This generator is useful for property-based testing of functions or components that process maps with heterogeneous
+ * key-value content.
+ *
+ * ## Note:
+ * The key generation ensures uniqueness by storing entries in a [MutableMap], and retries are performed if a duplicate
+ * key is generated.
+ *
+ * @return An [Arb] generator that produces random [IntStringMap] instances.
+ */
 private fun arbIntStringMap(): Arb<IntStringMap> = arbitrary { (random, seed) ->
     val map = mutableMapOf<Int, String>()
     val size = random.nextInt(1, 100)

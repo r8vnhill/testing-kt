@@ -1,20 +1,26 @@
 package cl.ravenhill.lists
 
+import io.kotest.common.ExperimentalKotest
 import io.kotest.core.spec.style.FreeSpec
 import io.kotest.matchers.doubles.shouldBeGreaterThanOrEqual
 import io.kotest.matchers.doubles.shouldBeLessThan
 import io.kotest.property.Arb
+import io.kotest.property.PropTestConfig
 import io.kotest.property.arbitrary.arbitrary
 import io.kotest.property.checkAll
 
 typealias ListAndAverage = Pair<MutableList<Double>, Double>
 
+@OptIn(ExperimentalKotest::class)
 class AverageTest : FreeSpec({
     "Given a list of integers" - {
         "when calculating the average of a non-empty list" - {
             ("should return the sum of the elements divided by the number of " +
                     "elements") {
-                checkAll(arbIntListAndAverage()) { (list, average) ->
+                checkAll(
+                    PropTestConfig(seed = 123456),
+                    arbIntListAndAverage()
+                ) { (list, average) ->
                     average(list)
                         .shouldBeGreaterThanOrEqual(average - 0.0001)
                         .shouldBeLessThan(average + 0.0001)

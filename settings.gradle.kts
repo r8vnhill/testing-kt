@@ -15,12 +15,13 @@ dependencyResolutionManagement {
     }
 }
 
-include("intro")
-include("pbt:biggest")
-include("bdd")
-include("pbt:arbitrary:prng")
 include("assertions")
-include("pbt:arbitrary:stats")
+include("bdd")
 include("ddt")
-include("pbt:str-cat")
+include("intro")
+include("matchers:custom")
 include("pbt:arbitrary:composition")
+include("pbt:arbitrary:prng")
+include("pbt:arbitrary:stats")
+include("pbt:biggest")
+include("pbt:str-cat")

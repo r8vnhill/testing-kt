@@ -11,6 +11,7 @@ plugins {
     id("prng")
     id("stats")
     id("str-cat")
+    id("predef-matchers")
 }
 
 val projectGroup = extra["testing.group"]!! // Throws an exception if the property is not found
